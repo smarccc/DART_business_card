@@ -28,67 +28,88 @@ class BusinessCard extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Business Card'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const CircleAvatar(
-              radius: 50.0,
-              backgroundImage: AssetImage('images/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg'), // Replace 'assets/profile_image.jpg' with your image asset path
-            ),
-            const SizedBox(height: 20.0),
-            const Text(
-              'John Doe',
-              style: TextStyle(
-                fontSize: 24.0,
-                fontWeight: FontWeight.bold,
+      body: Stack(
+        children: [
+          Column(
+            children: [
+              Expanded(
+                flex: 1,
+                child: Container(color: Color.fromARGB(255, 0, 0, 0)), // Full black background
               ),
-            ),
-            const SizedBox(height: 5.0),
-            Text(
-              'Software Developer',
-              style: TextStyle(
-                fontSize: 18.0,
-                color: Colors.grey[700],
-              ),
-            ),
-            const SizedBox(height: 20.0),
-            Text(
-              'Address: 123 Main St, City, Country',
-              style: TextStyle(
-                fontSize: 16.0,
-                color: Colors.grey[700],
-              ),
-            ),
-            const SizedBox(height: 10.0),
-            Text(
-              'Phone number: +1234567890',
-              style: TextStyle(
-                fontSize: 16.0,
-                color: Colors.grey[700],
-              ),
-            ),
-            const SizedBox(height: 10.0),
-            Text(
-              'Email: john.doe@example.com',
-              style: TextStyle(
-                fontSize: 16.0,
-                color: Colors.grey[700],
-              ),
-            ),
-            const SizedBox(height: 20.0),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                _buildSocialMediaItem('images/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg', 'Facebook'),
+            ],
+          ),
+          FractionallySizedBox(
+            alignment: Alignment.topCenter,
+            heightFactor: 0.3, // Top half
+            child: Container(color: Colors.grey), // Top half background
+          ),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                const CircleAvatar(
+                  radius: 100.0,
+                  backgroundImage: AssetImage('images/profile.jpg'), 
+                ),
+                const SizedBox(height: 30.0),
+                const Text(
+                  'MARCNEL H. PANGANIBAN',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 255, 255, 255),
+                  
+                    fontSize: 28.0,
+                    fontWeight: FontWeight.bold,
+                    
+                    
+                  ),
+                ),
+                const SizedBox(height: 5.0),
+                const Text(
+                  'GAME DEVELOPER / WEB DEVELOPER',
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    color: Color.fromARGB(255, 255, 255, 255),
+                  ),
+                ),
+                const SizedBox(height: 40.0),
+                const Text(
+                  'Address: SAN GREGORIO, LAUREL, BATANGAS',
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    color: Color.fromARGB(255, 255, 255, 255),
+                  ),
+                ),
                 const SizedBox(height: 10.0),
-                _buildSocialMediaItem('images/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg', 'Instagram'),
+                const Text(
+                  'Phone number: 09126843236',
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    color: Color.fromARGB(255, 255, 255, 255),
+                  ),
+                ),
                 const SizedBox(height: 10.0),
-                _buildSocialMediaItem('images/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg', 'GitHub'),
+                const Text(
+                  'Email: marcnelpanganiban0808@gmail.com',
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    color: Color.fromARGB(255, 255, 255, 255),
+                  ),
+                ),
+                const SizedBox(height: 40.0),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    _buildSocialMediaItem('images/facebook-removebg-preview.png', 'Marcnel Panganiban'),
+                    const SizedBox(height: 10.0),
+                    _buildSocialMediaItem('images/instagram-removebg-preview.png', 'marccc.hp'),
+                    const SizedBox(height: 10.0),
+                    _buildSocialMediaItem('images/Screenshot_2024-04-26_171230-removebg-preview.png', 'smarccc'),
+                  ],
+                ),
               ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -104,12 +125,13 @@ class BusinessCard extends StatelessWidget {
         const SizedBox(height: 5.0),
         Text(
           name,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 14.0,
-            color: Colors.grey[700],
+            color: Color.fromARGB(255, 255, 255, 255),
           ),
         ),
       ],
     );
   }
 }
+

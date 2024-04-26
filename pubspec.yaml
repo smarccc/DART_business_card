@@ -65,10 +65,10 @@ flutter:
 
  
   assets:
-    - images/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg
-  #  - images/facebook_logo.png
-   # - images/instagram_logo.png
-  #  - images/github_logo.png
+    - images/profile.jpg
+    - images/facebook-removebg-preview.png
+    - images/Screenshot_2024-04-26_171230-removebg-preview.png
+    - images/instagram-removebg-preview.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
